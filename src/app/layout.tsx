@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, Rubik } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Analytics } from "@vercel/analytics/react";
 
 const dmSans = DM_Sans({
 	subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
 		>
 			<body className="min-h-full bg-background text-foreground">
 				{children}
+				<Analytics />
 			</body>
 		</html>
 	);
